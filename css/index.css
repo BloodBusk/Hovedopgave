@@ -1,0 +1,701 @@
+/* #region Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: poppinsBold;
+  src: url(/font/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppinsSemiBold;
+  src: url(/font/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: poppinsMedium;
+  src: url(/font/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: poppinsMediumItalic;
+  src: url(/font/Poppins/Poppins-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(/font/Poppins/Poppins-Regular.ttf);
+}
+
+h1 {
+  font-size: 48px;
+  font-family: poppinsBold;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: poppinsBold;
+  text-align: center;
+}
+
+h3 {
+  font-family: poppinsSemiBold;
+}
+
+p {
+  font-size: 18px;
+  font-family: poppins;
+}
+
+.poppinsMedium {
+  font-size: 24px;
+  font-family: poppinsMedium;
+}
+
+.content {
+  width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-top: 15vh !important;
+}
+
+.alignCenterText {
+  text-align: center;
+}
+
+/* img modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 2%; /* Location of the box */
+  text-align: center;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5vh;
+}
+
+.logoColor1 {
+  color: black;
+  font-size: 24px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoColor2 {
+  color: #40bcd8;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  margin-left: 50px;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blackLink {
+  color: black;
+}
+
+.navLinks a:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.navBuyBtn {
+  background: #40bcd8;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35);
+}
+/* #endregion */
+
+/* #region Forside Body */
+/* landingpage section */
+.lpImg {
+  background-image: url(/img/forside.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 200vh;
+  margin-top: 6vh;
+}
+
+.lpContent {
+  width: 30%;
+}
+
+.lpContent svg {
+  margin-left: 150px;
+}
+
+.lpBtn {
+  margin-top: 3vh;
+  padding: 3% 4% 3% 8%;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: #088391;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #40bcd8;
+}
+
+.lpContent2 {
+  margin-top: 80vh;
+  display: flex;
+}
+
+.lpContent2 h2 {
+  color: white;
+  text-align: left;
+  font-size: 42px;
+  margin-top: 0;
+}
+
+.lpContent2 p {
+  background: white;
+  padding: 30px 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.lpContent2 iframe {
+  width: 504.88px;
+  height: 452px;
+}
+
+.lpContent2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ads section */
+.ads {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin: 4vh auto 0 auto;
+  width: 80%;
+}
+
+.ads p {
+  width: 50%;
+}
+
+.adsIcon {
+  width: 30%;
+}
+
+.adsIcon i {
+  font-size: 50px;
+  color: #40bcd8;
+}
+
+/* 100% completed course section */
+.completedCourse {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.completedCourse div {
+  width: 50%;
+}
+
+.completedCourse img {
+  width: 80%;
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.completedCourseText h2,
+.completedCourseText p {
+  text-align: right;
+}
+
+.completedCircle {
+  position: absolute;
+  width: 559px;
+  height: 559px;
+  background: #1c80a3;
+  border-radius: 50%;
+  top: -50%;
+  left: -40%;
+  z-index: -99;
+}
+
+/* kursus indhold section */
+.courseContains {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.courseContainsContent {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 2% 0;
+}
+
+.courseContainsContent p {
+  border: 1px solid rgba(0, 0, 0, 0.19);
+  width: 70%;
+  text-align: center;
+  padding: 50px 4%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+.courseContentIcons {
+  font-size: 35px;
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+  color: #40bcd8;
+  top: -1%;
+  left: 20%;
+}
+
+.seeMoreBtn {
+  margin-top: 3vh;
+  padding: 1% 2% 1% 5%;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: #088391;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #40bcd8;
+}
+
+.courseContainsCircle {
+  position: absolute;
+  width: 361px;
+  height: 361px;
+  background: #40bcd8;
+  border-radius: 50%;
+  top: -15%;
+  right: -10%;
+  z-index: -99;
+}
+
+.courseContainsCircle2 {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background: #1c80a3;
+  border-radius: 50%;
+  bottom: 22%;
+  right: 9%;
+  z-index: 1;
+}
+
+.courseContainsCircle3 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #40bcd8;
+  border-radius: 50%;
+  bottom: 20.5%;
+  right: 11%;
+  z-index: 1;
+}
+
+/* comments section */
+.commentSection {
+  position: relative;
+}
+
+#commentSection {
+  width: 60%;
+  margin: auto;
+  font-family: poppins;
+  text-align: center;
+}
+
+.commentArrowLeft {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.commentArrowRight {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#commentName {
+  margin-top: 4vh;
+  font-family: poppinsMediumItalic;
+  text-align: center;
+  display: list-item; /* This has to be "list-item"                                               */
+  list-style-type: disc; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+  list-style-position: inside;
+}
+
+.commentCircle1 {
+  position: absolute;
+  width: 203px;
+  height: 203px;
+  top: -10%;
+  left: 0;
+  background: #1c80a3;
+  border-radius: 50%;
+}
+
+.commentCircle2 {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  bottom: 0;
+  right: 5%;
+  background: #40bcd8;
+  border-radius: 50%;
+}
+
+/* start i dag section */
+
+.startTodayBtn {
+  margin-top: 3vh;
+  padding: 2% 3% 2% 6%;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: #1c80a3;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #1c80a3;
+}
+
+.startTodaySection {
+  display: flex;
+}
+
+.startTodaySection div {
+  width: 48%;
+}
+
+.startTodaySection h2 {
+  text-align: left;
+}
+
+.startTodaySection svg {
+  margin-left: 110px;
+  margin-top: -10px;
+}
+
+.startTodaySection div img {
+  width: 100%;
+}
+
+/* #endregion */
+
+/* #region Kursus Body */
+/* mentor course section */
+.mentorCourse {
+  display: flex;
+}
+.coursePrice {
+  font-size: 36px;
+}
+.courseSlogan {
+  font-size: 14px;
+}
+.courseLeft {
+  width: 50%;
+  padding-right: 10%;
+}
+.courseRight {
+  width: 50%;
+}
+
+.courseRight img {
+  width: 100%;
+}
+
+.courseLeft button {
+  margin-top: 3vh;
+  padding: 3% 2% 3% 10%;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: #40bcd8;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #40bcd8;
+}
+
+.courseLeft button:hover {
+  transition: 0.2s ease-in-out;
+
+  color: #40bcd8;
+  background: white;
+}
+
+.fa-arrow-right {
+  margin-left: 30px;
+}
+
+.dropDownContainer {
+  cursor: pointer;
+}
+
+.dropDownInfo {
+  border: 1px solid black;
+  padding: 3% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropDownHidden {
+  border: 1px solid black;
+  padding: 3% 5%;
+}
+
+.toggleHidden {
+  display: none;
+}
+
+/* what you learn section */
+.whatYouLearn {
+  border: 1px solid black;
+  box-shadow: 0px 1px 5px black;
+}
+
+.learningList {
+  display: flex;
+  padding: 2vh;
+}
+
+.fa-check-circle {
+  font-size: 40px;
+  padding-right: 1%;
+  color: #04bf00;
+}
+
+.whatYouLearnContainer {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.whatYouLearnLeft {
+  width: 50%;
+}
+.whatYouLearnRight {
+  width: 50%;
+}
+
+/* my results section */
+
+.circleContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.circleResults {
+  border: 2px solid #40bcd8;
+  width: 48%;
+  height: 60vh;
+  border-radius: 50%;
+  margin: 1%;
+  position: relative;
+}
+.circleContent {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -15%);
+}
+
+.circleContent img {
+  width: 100%;
+}
+
+.myImgC:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0px 0px 10px black;
+}
+
+.circleContainer p {
+  text-align: center;
+  padding: 10% 5%;
+}
+
+/* fuld gennemgang section */
+.gennemgang img {
+  width: 70%;
+  display: block;
+  margin: 2vh auto;
+}
+/* #endregion */
+
+/* #region Footer */
+.footerDiv {
+  display: flex;
+  padding: 3vh 0;
+}
+
+.footerDiv div {
+  padding-right: 4%;
+}
+.footerDiv div * {
+  padding: 1% 0 1% 0;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 2vh 0;
+}
+/* #endregion */
+
+/* #region Om Mig Body */
+.omMigSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10vh;
+}
+
+.omMigLeft {
+  width: 40%;
+}
+
+.omMigRight {
+  width: 30%;
+  text-align: center;
+}
+
+.omMigRight img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.omMigSoMe {
+  font-size: 40px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region kontakt os Body */
+.kontaktOsSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kontaktOsLeft {
+  width: 45%;
+}
+
+.kontaktOsRight {
+  width: 50%;
+}
+
+.kontaktOsRight form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  margin-left: 5px;
+}
+
+input[type="text"],
+textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+  min-width: 100%;
+}
+
+input[type="submit"] {
+  font-family: poppinsMedium;
+  padding: 10px;
+  margin: 2vh auto 0 auto;
+  background: #40BCD8;
+  border: 2px solid #40BCD8;
+  border-radius: 15px;
+  width: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: white;
+  color: #40BCD8;
+}
+
+/* #endregion */
+
+/* #region media queries */
+/* #region 1200px */
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 80%;
+  }
+}
+/* #endregion */
+/* #endregion */

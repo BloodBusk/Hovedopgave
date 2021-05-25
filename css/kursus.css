@@ -1,0 +1,279 @@
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: poppinsBold;
+  src: url(/font/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: poppins;
+  src: url(/font/Poppins/Poppins-Regular.ttf);
+}
+
+h1 {
+  font-size: 48px;
+  font-family: poppinsBold;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: poppinsBold;
+  text-align: center;
+  margin-top: 6vh;
+  margin-bottom: 2vh;
+}
+
+p {
+  font-size: 18px;
+  font-family: poppins;
+}
+
+.content {
+  width: 1200px;
+  margin: 3vh auto;
+}
+
+.alignCenterText {
+  text-align: center;
+}
+
+/* img modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 2%; /* Location of the box */
+  text-align: center;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoColor1 {
+  color: black;
+  font-size: 24px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoColor2 {
+  color: #40bcd8;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  margin-left: 50px;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navLinks a:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.navBuyBtn {
+  background: #40bcd8;
+  border-radius: 50px;
+  color: white;
+}
+
+/* Forside body */
+
+/* Kursus Body */
+/* mentor course section */
+.mentorCourse {
+  display: flex;
+}
+.coursePrice {
+  font-size: 36px;
+}
+.courseSlogan {
+  font-size: 14px;
+}
+.courseLeft {
+  width: 50%;
+  padding-right: 10%;
+}
+.courseRight {
+  width: 50%;
+}
+
+.courseRight img {
+  width: 100%;
+}
+
+.courseLeft button {
+  margin-top: 3vh;
+  padding: 3% 2% 3% 10%;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: #40bcd8;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #40bcd8;
+}
+
+.courseLeft button:hover {
+  transition: 0.2s ease-in-out;
+
+  color: #40bcd8;
+  background: white;
+}
+
+.fa-arrow-right {
+  margin-left: 30px;
+}
+
+.dropDownContainer {
+  cursor: pointer;
+}
+
+.dropDownInfo {
+  border: 1px solid black;
+  padding: 3% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropDownHidden {
+  border: 1px solid black;
+  padding: 3% 5%;
+}
+
+.toggleHidden {
+  display: none;
+}
+
+/* what you learn section */
+.whatYouLearn {
+  border: 1px solid black;
+  box-shadow: 0px 1px 5px black;
+}
+
+.learningList {
+  display: flex;
+  padding: 2vh;
+}
+
+.fa-check-circle {
+  font-size: 40px;
+  padding-right: 1%;
+  color: #04bf00;
+}
+
+.whatYouLearnContainer {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.whatYouLearnLeft {
+  width: 50%;
+}
+.whatYouLearnRight {
+  width: 50%;
+}
+
+/* my results section */
+
+.circleContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.circleResults {
+  border: 2px solid #40bcd8;
+  width: 48%;
+  height: 60vh;
+  border-radius: 50%;
+  margin: 1%;
+  position: relative;
+}
+.circleContent {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -15%);
+}
+
+.circleContent img {
+  width: 100%;
+}
+
+.myImgC:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0px 0px 10px black;
+}
+
+.circleContainer p {
+  text-align: center;
+  padding: 10% 5%;
+}
+
+/* fuld gennemgang section */
+.gennemgang img {
+  width: 70%;
+  display: block;
+  margin: 2vh auto;
+}
+
+/* Footer */
+.footerDiv {
+  display: flex;
+  padding: 3vh 0;
+}
+
+.footerDiv div {
+  padding-right: 4%;
+}
+.footerDiv div * {
+  padding: 1% 0 1% 0;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 2vh 0;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 80%;
+  }
+}
