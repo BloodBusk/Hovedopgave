@@ -10,7 +10,17 @@ for (let i = 0; i < img.length; i++) {
     modal.style.display = "block";
     modalImg.src = this.src;
     modalImg.style.width = "auto";
-    modalImg.style.height = "90%";
+    if (window.matchMedia("(max-width: 320px)").matches) {
+      modalImg.style.height = "13%";
+    }else if(window.matchMedia("(max-width: 375px)").matches){
+      modalImg.style.height = "17%";
+    }else if(window.matchMedia("(max-width: 768px)").matches){
+      modalImg.style.height = "40%";
+    }else if(window.matchMedia("(max-width: 1024px)").matches){
+      modalImg.style.height = "40%";
+    } else {
+      modalImg.style.height = "70%";
+    }
   });
 }
 
@@ -31,5 +41,3 @@ for (let i = 0; i < img.length; i++) {
     dropDownHidden[i].classList.toggle("toggleHidden");
   });
 }
-
-

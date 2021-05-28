@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Med Dropshipping Academy kurser lærer i alt i har bruge for at starte jeres egen profitable webshop. Drømmer du om iværksætteri, så er dette et kursus for dig.
+    "
+    />
     <link rel="stylesheet" href="/css/index.css" />
     <!-- font awesome cdn link -->
     <link
@@ -13,14 +18,34 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- scripts -->
     <script src="js/comments.js" defer></script>
-    <script src="js/w3schoolsInclude.js" defer></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="js/hamburgerMenu.js" defer></script>
+
     <title>Dropshipping Academy</title>
   </head>
   <body>
-    <!-- w3 include js -->
-    <header class="content" w3-include-html="header.html"></header>
+    <!-- Header -->
+    <header class="content">
+      <a href="index.html"
+        ><img
+          class="logo"
+          src="img/Logo.png"
+          alt="Dropshipping Academy Logo
+        "
+      /></a>
+      <div class="navLinks toggleMenu" id="hamburgerMenu">
+        <a href="kursus.html" class="blackLink">Kursus</a>
+        <a href="omMig.html" class="blackLink">Om Mig</a>
+        <a href="kontaktOs.html" class="blackLink">Kontakt Os</a>
+        <a
+          href="https://dropshipping-academy.dk/54914351282/checkouts/109431d4cad94c51cd27f7cd1d81585c?skip_shopify_pay=true&locale=da"
+          class="navBuyBtn"
+          >Køb nu</a
+        >
+      </div>
+      <i class="fas fa-bars" id="hamburgerIcon"></i>
+    </header>
     <main>
       <!-- landingpage section -->
       <section class="lpImg">
@@ -78,12 +103,20 @@
                 </filter>
               </defs>
             </svg>
-            <button class="lpBtn">
-              Book et møde <i class="fas fa-arrow-right"></i>
+            <button class="lpBtn btn">
+              <a href="kontaktOs.html#bookEtMøde"
+                >Book et møde <i class="fas fa-arrow-right"></i
+              ></a>
             </button>
           </div>
           <div class="lpContent2">
-            <iframe></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/7NYgCIgR9e0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
             <div>
               <h2>Dropshipping <br />Academy <br />Intro</h2>
               <p class="alignCenterText">
@@ -97,22 +130,22 @@
       </section>
 
       <!-- ads section -->
-      <section class="content">
+      <section class="content adsContainer">
         <div class="ads">
           <div class="adsIcon">
             <i class="fab fa-facebook-square"></i>
             <h3>Facebook Ads <br />ekspert</h3>
           </div>
           <p>
-            Jeg har brugt +4.000.000 kroner på Facebook Ads, og jeg bruger til
-            dagligt mellem 25.000 til 30.000,- på Facebook Ads med stor profit.
-            Jeg viser præcist hvordan i kan gøre det samme, og hvordan i på den
-            måde kan printe penge til jer selv dagligt!
+            Jeg har brugt over 4.000.000,- på Facebook Ads, og jeg bruger
+            til dagligt mellem 25.000 til 30.000,- på Facebook Ads med stor
+            profit. Jeg viser præcist hvordan I kan gøre det samme, og hvordan I
+            på den måde kan printe penge til jer selv dagligt!
           </p>
         </div>
 
         <div class="ads">
-          <p>
+          <p class="adsDesktopOnly">
             Jeg benytter Google Ads på en måde som ingen andre! Jeg viser dig
             præcist, hvordan du kan gøre det samme. Jeg tjener til dagligt
             mellem 10.000-15.000,- via Google Ads alene.
@@ -121,6 +154,11 @@
             <i class="fab fa-google"></i>
             <h3>Google Ads <br />strategi</h3>
           </div>
+          <p class="adsMobileOnly">
+            Jeg benytter Google Ads på en måde som ingen andre! Jeg viser dig
+            præcist, hvordan du kan gøre det samme. Jeg tjener til dagligt
+            mellem 10.000-15.000,- via Google Ads alene.
+          </p>
         </div>
 
         <div class="ads">
@@ -130,9 +168,9 @@
           </div>
           <p>
             Jeg er startet helt fra bunden, og jeg brugt utallige timer på at
-            lære præcist hvordan man opbygger en profitabel Dropshipping
-            Webshop, og hvordan man finder vinder produkter samt hvordan man
-            skalere sin webshop til vilde resultater på kort tid.
+            lære præcist hvordan man opbygger en profitabel dropshipping
+            webshop, og hvordan man finder vinder produkter samt skalerer sin
+            webshop til vilde resultater på kort tid.
           </p>
         </div>
       </section>
@@ -141,23 +179,26 @@
       <section class="content completedCourse">
         <div class="completedCircle"></div>
         <div>
-          <img src="img/kursus4.png" />
+          <img
+            src="img/kursus4.png"
+            alt="Dropshipping Academy webshop kursus"
+          />
         </div>
         <div class="completedCourseText">
-          <h2><span>100%</span><br />Gennemført Kursus</h2>
+          <h2><span class="blueText">100%</span><br />Gennemført Kursus</h2>
           <p>
-            I lærer alt i har brug for, til at i kan starte jeres egen
+            I lærer alt hvad I har brug for til at kunne starte jeres egen
             profitable webshop fra bunden. Jeg har selv henholdsvis 2
-            forskellige webshops, hvor jeg omsætter tilsammen for over 150.000,-
-            dagligt, med KUN 1 produkt! I dette kursus viser jeg præcist hvordan
-            i kan gøre det samme! (UDEN ET KÆMPE BUDGET - jeg startede selv med
-            kun 500,- på min konto)
+            forskellige webshops, hvor jeg til dagligt omsætter for over
+            150.000,- med KUN 1 produkt! I dette kursus viser jeg præcist,
+            hvordan I kan gøre det samme! (UDEN ET KÆMPE BUDGET - jeg startede
+            selv med kun 500,- på min konto)
           </p>
           <br />
           <p>
-            Jeg viser jer hvordan i finder VINDER produkter, skalere jeres
-            webshop via Facebook og Google ads, samt hvordan i opsætter en
-            webshop med en høj konveteringsrate + hvordan i skal brande jeres
+            Jeg viser jer hvordan I finder VINDER produkter, skalerer jeres
+            webshop via Facebook og Google ads, hvordan I opsætter en
+            webshop med en høj konveteringsrate og hvordan I skal brande jeres
             produkt/webshop.
           </p>
         </div>
@@ -171,27 +212,48 @@
         <div class="courseContainsCircle3"></div>
         <div class="courseContainsContent">
           <i class="courseContentIcons fab fa-facebook-square"></i>
-          <p class="poppinsMedium">Mine facebook strategi - Fuld gennemgang</p>
+          <p class="poppinsMedium">
+            <span class="shownSpan"
+              >Mine facebook strategi - Fuld gennemgang</span
+            ><span class="hiddenSpan"
+              >Facebook Ads, Facebook Posts og meget mere</span
+            >
+          </p>
         </div>
 
         <div class="courseContainsContent">
           <i class="courseContentIcons fab fa-google"></i>
-          <p class="poppinsMedium">Lær om profitable google ads</p>
+          <p class="poppinsMedium">
+            <span class="shownSpan">Lær om profitable google ads</span
+            ><span class="hiddenSpan"
+              >Google Ads, pris, lav CPA og meget mere</span
+            >
+          </p>
         </div>
 
         <div class="courseContainsContent">
           <i class="courseContentIcons fas fa-reply"></i>
           <p class="poppinsMedium">
-            Hvordan man skaber en webshop med høj konverteringsrate
+            <span class="shownSpan">
+              Hvordan man skaber en webshop med høj konverteringsrate</span
+            ><span class="hiddenSpan"
+              >Shopify, kunde statistik, målgruppe, forbedringer og meget
+              mere</span
+            >
           </p>
         </div>
 
         <div class="courseContainsContent">
           <i class="courseContentIcons fas fa-trophy"></i>
-          <p class="poppinsMedium">Hvordan man finder vinderprodukter</p>
+          <p class="poppinsMedium">
+            <span class="shownSpan">Hvordan man finder vinderprodukter</span
+            ><span class="hiddenSpan"
+              >Produkt analyse, kundesegmentering og meget mere</span
+            >
+          </p>
         </div>
-        <button class="seeMoreBtn">
-          Se Mere <i class="fas fa-arrow-right"></i>
+        <button class="seeMoreBtn btn">
+          <a href="kursus.html">Se Mere <i class="fas fa-arrow-right"></i></a>
         </button>
       </section>
 
@@ -263,32 +325,58 @@
           </svg>
 
           <p>
-            Grunden til 99% af alle personer aldrig får eller opnår den succes
-            som de drømmer om, er fordi de aldrig starter. Oftest fordi man er
-            bange for at fejle.. Men hvis du aldrig giver op, så kan du IKKE
+            Grunden til at 99% af alle personer aldrig får eller opnår den succes
+            som de drømmer om, er fordi de aldrig starter. Oftest er det fordi man er
+            bange for at fejle. Men hvis du aldrig giver op, så kan du IKKE
             fejle!
           </p>
-          <br>
+          <br />
           <p>
-            Du får i dag chancen for at starte et nyt kapitel i dit liv, via en
-            forretningsmodel som allerede er 100% gennemført, og det er klart
-            den bedste måde at opbygge sin egen profitable skalerbar forretning
-            på + det er næsten 100% risikofrit og kræver ikke et stort budget.
+            Du får i dag chancen for at starte et nyt kapitel i dit liv via en
+            forretningsmodel som allerede er 100% gennemført. Det er klart
+            den bedste måde at opbygge sin egen profitable skalerbare forretning
+            + det er næsten 100% risikofrit og kræver ikke et stort budget.
           </p>
-          <br>
+          <br />
           <p>
-            Jeg giver dig alle værktøjerne i mit forløb til succes, det eneste
+            Jeg giver dig alle værktøjerne til succes i mit forløb, det eneste
             det kræver af dig, er at du STARTER!
           </p>
-          <button class="startTodayBtn">
-            Start i dag <i class="fas fa-arrow-right"></i>
+          <button class="startTodayBtn btn">
+            <a href="kursus.html"
+              >Start i dag <i class="fas fa-arrow-right"></i
+            ></a>
           </button>
         </div>
         <div>
-          <img src="img/kursus4.png" />
+          <img src="img/kursus4.png" alt="Dropshipping Academy start idag" />
         </div>
       </section>
     </main>
-    <footer class="content" w3-include-html="footer.html"></footer>
+    <!-- Footer -->
+    <footer class="content">
+      <div class="divider"></div>
+      <a href="index.html"><img class="logo" src="img/Logo.png" /></a>
+      <div class="footerDiv">
+        <div>
+          <h3>Info</h3>
+          <p>Handelsbetingelser</p>
+          <p>Refunderings politik</p>
+          <p>Privatlivspolitik</p>
+          <p>Servicebetingelser</p>
+          <p>Tilfredshedsgarenti</p>
+        </div>
+        <div>
+          <h3>Dropshipping Academy</h3>
+          <p>CVR: DK42304948</p>
+          <p>Adresse: Kildeparken 12,</p>
+          <p>8722 Hedensted</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p class="alignCenterText">
+        © 2021. Alle rettigheder forbeholdt Dropshipping Academy ApS.
+      </p>
+    </footer>
   </body>
 </html>

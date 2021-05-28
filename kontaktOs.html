@@ -4,15 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontakt os hvis du har nogle spørgsmål om Dropshipping Academy."
+    />
     <link rel="stylesheet" href="/css/index.css" />
-    <script src="js/w3schoolsInclude.js" defer></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- scripts -->
+    <script src="js/hamburgerMenu.js" defer></script>
+    <script src="js/kalender.js" defer></script>
+    <script src="js/formCheck.js" defer></script>
+
     <title>Kontakt Os</title>
   </head>
   <body>
-    <!-- w3 include js -->
-    <header class="content" w3-include-html="header.html"></header>
+    <!-- Header -->
+    <header class="content">
+      <a href="index.html"><img class="logo" src="img/Logo.png" /></a>
+      <div class="navLinks toggleMenu" id="hamburgerMenu">
+        <a href="kursus.html" class="blackLink">Kursus</a>
+        <a href="omMig.html" class="blackLink">Om Mig</a>
+        <a href="kontaktOs.html" class="blackLink">Kontakt Os</a>
+        <a
+          href="https://dropshipping-academy.dk/54914351282/checkouts/109431d4cad94c51cd27f7cd1d81585c?skip_shopify_pay=true&locale=da"
+          class="navBuyBtn"
+          >Køb nu</a
+        >
+      </div>
+      <i class="fas fa-bars" id="hamburgerIcon"></i>
+    </header>
+
     <main>
+      <!-- kontakt -->
       <section class="content kontaktOsSection">
         <div class="kontaktOsLeft">
           <h1>Kontakt Os</h1>
@@ -22,28 +51,82 @@
             eventuelt booke dig ind til et møde på 15 minutter, med min
             konsulent Sebastian Bruhn.
           </p>
-          <br>
+          <br />
           <h3>Dropshipping Academy</h3>
           <p>
             CVR: DK42304948<br />
             Adresse: Kildeparken 12,<br />
             8722 Hedensted
           </p>
-          <img src="#" />
+          <br />
+          <img class="logo" src="img/Logo.png" />
         </div>
         <div class="kontaktOsRight">
-            <form>
-                <label>Dit Navn</label>
-                <input type="text" placeholder="Dit navn">
-                <label>Email</label>
-                <input type="text" placeholder="Email">
-                <label>Besked</label>
-                <textarea type="text" placeholder="Besked"></textarea>
-                <input type="submit" value="Send Besked">
-            </form>
+          <!-- form prevents page reload with return false -->
+          <form onsubmit="validate(); return false">
+            <label>Dit Navn</label>
+            <input type="text" placeholder="Dit navn" id="nameField" />
+            <label>Email</label>
+            <input type="text" placeholder="Email" />
+            <label>Besked</label>
+            <textarea type="text" placeholder="Besked"></textarea>
+            <input type="submit" value="Send Besked" />
+            <p id="errorText"></p>
+          </form>
         </div>
       </section>
+      <!-- Kalender section -->
+      <section class="content kalender" id="bookEtMøde">
+        <div class="kalenderLeft">
+          <h2>Book et møde</h2>
+          <p>
+            Her kan du booke et gratis og uforpligtende opkald med min konsulent
+            Sebastian Bruhn, hvor du kan:
+          </p>
+          <li>Få besvaret spørgsmål omkring forløbet.</li>
+          <li>Høre om det er det rigtige sted for dig.</li>
+          <li>Få en personlig samtale med os.</li>
+          <li>Start hvis du føler dig parat.</li>
+          <p>
+            Opkaldets varighed vil være ca. 15-30 minutter.<br />
+            Mødet finder sted online på Google Meet. Du vil modtage en
+            invitation på mail/besked 15 minutter før mødet starter. (Eventuelt
+            tjek spam filter).<br />
+            Jeg ser frem til at snakke med dig - husk kaffen!
+          </p>
+        </div>
+        <div class="kalenderRight" id="kalenderInsert">
+          <div id="kalenderDayNames"></div>
+          <div id="kalenderDays"></div>
+          <div id="month"></div>
+        </div>
+      </section>
+      <p class="content" id="date"></p>
     </main>
-    <footer class="content" w3-include-html="footer.html"></footer>
+    <!-- Footer -->
+    <footer class="content">
+      <div class="divider"></div>
+      <a href="index.html"><img class="logo" src="img/Logo.png" /></a>
+      <div class="footerDiv">
+        <div>
+          <h3>Info</h3>
+          <p>Handelsbetingelser</p>
+          <p>Refunderings politik</p>
+          <p>Privatlivspolitik</p>
+          <p>Servicebetingelser</p>
+          <p>Tilfredshedsgarenti</p>
+        </div>
+        <div>
+          <h3>Dropshipping Academy</h3>
+          <p>CVR: DK42304948</p>
+          <p>Adresse: Kildeparken 12,</p>
+          <p>8722 Hedensted</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p class="alignCenterText">
+        © 2021. Alle rettigheder forbeholdt Dropshipping Academy ApS.
+      </p>
+    </footer>
   </body>
 </html>
